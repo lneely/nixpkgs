@@ -3,23 +3,23 @@
 # plan9port nixpkg.
 {
     pkgs,
-    lib,
-    stdenv,
-    fetchFromGitHub,
-    fontconfig,
-    freetype,
-    libX11,
-    libXext,
-    libXt,
-    xorgproto,
-    perl, # For building web manuals
-    which,
-    ed,
+    lib ? pkgs.lib, 
+    stdenv ? pkgs.stdenv,
+    fetchFromGitHub ? pkgs.fetchFromGitHub,
+    fontconfig ? pkgs.fontconfig,
+    freetype ? pkgs.freetype,
+    libX11 ? pkgs.xorg.libX11,
+    libXext ? pkgs.xorg.libXext,
+    libXt ? pkgs.xorg.libXt,
+    xorgproto ? pkgs.xorg.xorgproto,
+    perl ? pkgs.perl, # For building web manuals
+    which ? pkgs.which,
+    ed ? pkgs.ed,
     ...
 }:
 
 pkgs.stdenv.mkDerivation rec {
-    pname = "plan9port-eaburns";
+    pname = "plan9port-wayland";
     version = "08a4f8abe423f653c80ed5ec9c01315b58659578";
 
     src = fetchFromGitHub {
