@@ -36,12 +36,12 @@ pkgs.stdenv.mkDerivation rec {
     homepage = "https://github.com/lneely/pcloudcc-lneely";
     description = "pcloudcc-lneely is an independent fork of pcloud console client";
     longDescription = ''
-    pcloudcc-lneely is a simple linux console client for pCloud 
-    cloud storage, forked from github.com/pcloudcom/console-client 
-    and independently maintained.
-  '';
-  license = licenses.mit;
-  mainProgram = "pcloudcc";
-  platforms = platforms.linux;
-};
+      pcloudcc-lneely is a simple linux console client for pCloud 
+      cloud storage, forked from github.com/pcloudcom/console-client 
+      and independently maintained.
+    '';
+    license = licenses.mit;
+    mainProgram = "pcloudcc";
+    platforms = platforms.linux;
+  };
 }
