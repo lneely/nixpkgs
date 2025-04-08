@@ -1,4 +1,4 @@
-{ pkgs, lib, fetchzip, ... }:
+{ pkgs, lib ? pkgs.lib, fetchzip ? pkgs.fetchzip, ... }:
 
 pkgs.stdenv.mkDerivation rec {
   pname = "pcloudcc-lneely";
