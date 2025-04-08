@@ -27,7 +27,7 @@ pkgs.stdenv.mkDerivation rec {
 
   installPhase = ''
     runHook preInstall
-    mkdir $out/bin
+    mkdir -p $out/bin
     make DESTDIR=$out install
     runHook postInstall
   '';
